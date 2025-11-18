@@ -13,11 +13,14 @@ def main():
     kk_img = pg.image.load("fig/3.png") #練習3:こうかとん画像の読み込み
     kk_img = pg.transform.flip(kk_img, True, False) #練習3反転
     tmr = 0
+    x = 0
+
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [0, 0])
+        screen.blit(bg_img, [-x, 0])#練習5背景移動
         screen.blit(kk_img,(300,200)) #練習4
         pg.display.update()
         tmr += 1        
