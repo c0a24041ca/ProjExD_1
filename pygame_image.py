@@ -20,6 +20,7 @@ def main():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [0, 0])
+        screen.blit(bg_img, [-x+800, 0]) #練習7 こうかとんもう一匹
         screen.blit(bg_img, [-x, 0])#練習5背景移動
         screen.blit(kk_img,(300,200)) #練習4
         pg.display.update()
